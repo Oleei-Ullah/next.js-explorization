@@ -15,15 +15,15 @@ const Blog = ({ data }) => {
     return (
         <>
             <Navbar />
-            <div>
-                <h1>Blog data</h1>
+            <div className="w-1/2 mx-auto space-y-4">
+                <h1 className="text-center text-blue-600 font-bold text-[26px]">Blog data</h1>
                 {
                     data && data.map(({ id, title }) => {
                         return (
-                            <div key={id}>
-                                <h1>{id}</h1>
+                            <div key={id} className="p-2 shadow-md mt-3 flex gap-3">
+                                <h1 className="bg-blue-700 rounded-full text-white font-bold text-md inline p-1">{id}</h1>
                                 <Link href={`/blog/${id}`}>
-                                    <h2>{title}</h2>
+                                    <h2 className="capitalize">{title}</h2>
                                 </Link>
                             </div>
                         )

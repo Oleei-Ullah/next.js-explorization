@@ -29,10 +29,16 @@ export const getStaticProps = async (context) => {
     }
 }
 const Mydata = ({data}) => {
+    const {id, title, body} = data;
   return (
     <>
     <Navbar />
-    <h1>{data.body}</h1>
+    <div className="w-[50%] mx-auto shadow-md bg-white mt-10 rounded px-3 py-5">
+        <h1 className="bg-blue-700 rounded-full text-white font-bold text-md inline p-1">{id}</h1>
+
+        <h2 className="text-[18px] mt-2 font-semibold text-black">{title}</h2>
+        <h3 className="text-[14px] text-black p-1">{body}</h3>
+    </div>
     </>
   )
 }
