@@ -1,3 +1,4 @@
+import Navbar from "@/components/Navbar";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
@@ -16,6 +17,8 @@ const ErrorPage = () => {
         }, 3000);
     }, [router])
     return (
+        <>
+        <Navbar />
         <div className="flex items-center justify-center h-screen w-full bg-white text-black">
             <div className="relative w-full text-center">
                 <h1 className="font-extrabold text-[200px] text-[#b8e0f2] opacity-80">404</h1>
@@ -30,6 +33,7 @@ const ErrorPage = () => {
                 </div>
             </div>
         </div>
+        </>
     )
 }
 
